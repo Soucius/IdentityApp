@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "BuP4/hrTH7yx41nm7wvpOadn9hhxCun4wF4CBQK1uAeBFWTYGk9Fz/c4UITzuDw1f8GY39V4/tT4h7yVZ8r6sQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Soucius\\Desktop\\aspnetcore-dersleri\\IdentityApp\\IdentityApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Soucius\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Soucius\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Soucius\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Soucius\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}
