@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace IdentityApp.ViewModels {
     public class CreateViewModel {
         [Required]
-        public string UserName { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
 
         [Required]
         [EmailAddress]

@@ -1,4 +1,4 @@
-@model IEnumerable<IdentityUser>
+@model IEnumerable<AppUser>
 
 <a class="btn btn-primary" asp-action="Create">Create User</a>
 
@@ -22,7 +22,7 @@
             <tr>
                 <td>@user.Id</td>
 
-                <td>@user.UserName</td>
+                <td>@user.FullName</td>
 
                 <td>@user.Email</td>
 
