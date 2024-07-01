@@ -14,5 +14,7 @@ namespace IdentityApp.ViewModels {
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Parola eslesmiyor.")]
         public string? ConfirmPassword { get; set; }
+
+        public IList<string>? SelectedRoles { get; set; }
     }
 }

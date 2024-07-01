@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace IdentityApp.Controllers {
     public class UsersController: Controller {
         private UserManager<AppUser> _userManager;
+        private RoleManager<AppRole> _roleManager;
 
-        public UsersController(UserManager<AppUser> userManager)
+        public UsersController(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public IActionResult Index() {
@@ -53,10 +55,13 @@ namespace IdentityApp.Controllers {
             var user = await _userManager.FindByIdAsync(id);
 
             if (user != null) {
+                ViewBag.Roles = _roleManager.Roles.Select(i => i.Name).ToList();
+
                 return View(new EditViewModel {
                     Id = user.Id,
                     FullName = user.FullName,
-                    Email = user.Email
+                    Email = user.Email,
+                    SelectedRoles = await _userManager.GetRolesAsync(user)
                 });
             }
 
