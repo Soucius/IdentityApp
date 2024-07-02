@@ -1,15 +1,19 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace IdentityApp.Models {
-    public static class IdentitySeedData {
+namespace IdentityApp.Models
+{
+    public static class IdentitySeedData
+    {
         private const string adminUser = "admin";
         private const string adminPassword = "Admin_123";
 
-        public static async void IdentityTestUser(IApplicationBuilder app) {
+        public static async void IdentityTestUser(IApplicationBuilder app)
+        {
             var context = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<IdentityContext>();
 
-            if (context.Database.GetAppliedMigrations().Any()) {
+            if(context.Database.GetAppliedMigrations().Any())
+            {
                 context.Database.Migrate();
             }
 
@@ -17,17 +21,17 @@ namespace IdentityApp.Models {
 
             var user = await userManager.FindByNameAsync(adminUser);
 
-            if (user == null) {
+            if(user == null)
+            {
                 user = new AppUser {
-                    FullName = "Soucius Kaenj",
+                    FullName = "Sadık Turan",
                     UserName = adminUser,
-                    Email = "admin@soucius.com",
-                    PhoneNumber = "44444444"
+                    Email = "admin@sadikturan.com",
+                    PhoneNumber = "44444444"                    
                 };
 
                 await userManager.CreateAsync(user, adminPassword);
             }
         }
-
-    }
+    } 
 }
