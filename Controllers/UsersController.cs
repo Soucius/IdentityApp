@@ -27,7 +27,7 @@ namespace IdentityApp.Controllers {
         public async Task<IActionResult> Create(CreateViewModel model) {
             if (ModelState.IsValid) {
                 var user = new AppUser {
-                    UserName = model.Email,
+                    UserName = model.UserName,
                     Email = model.Email,
                     FullName = model.FullName
                 };
